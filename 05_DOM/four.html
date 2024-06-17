@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reshab | JS DOM </title>
+</head>
+<body style="background-color: black; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage(lang_name) {
+        const li = document.createElement('li');
+        li.innerHTML = `${lang_name}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    // addlanguage('Python')
+    // addlanguage('C')
+    // addlanguage('C++')
+    // addlanguage('JAVA')
+    // addlanguage('Rust')
+
+    function addOptiLanguage(lang_name) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang_name))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptiLanguage("Golang")
+    addOptiLanguage("C++")
+
+    // EDIT elements
+
+    const secondLang  = document.querySelector(" li:nth-child(2) ")
+    const newLi =  document.createElement('li')
+    newLi.textContent = "Rust"
+    secondLang.replaceWith(newLi)
+
+</script>
+
+</html>
